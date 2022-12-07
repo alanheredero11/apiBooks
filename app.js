@@ -2,9 +2,7 @@ const express = require("express");
 const cors = require("cors");
 
 //Routers
-// const studentRoutes = require("./routers/student.router");
-
-
+const userRouter = require("./routers/users.router");
 
 const errorHandling = require("./error/errorHandling");
 
@@ -18,9 +16,7 @@ app.use(express.json());
 
 // Routers
 
-// app.use(studentRoutes);
-
-
+app.use(userRouter);
 
 app.use(function (req, res, next) {
   res.status(404).json({

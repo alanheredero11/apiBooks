@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const { route } = require("../app");
 const router = Router();
-const proCtrl = require("")
+const proCtrl = require("../controller/user.controller")
 
 router.post("/registro", proCtrl.postRegistro);
 
